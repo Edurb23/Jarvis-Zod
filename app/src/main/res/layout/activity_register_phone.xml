@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/txtCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CADASTRO"
+        android:textSize="24sp"
+        android:textColor="@color/green_dark"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+
+    <TextView
+        android:id="@+id/txtDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Digite seu número de telefone para contato. Lembre-se de incluir o DDD e verificar se o número está correto para que possamos entrar em contato com você caso necessário."
+        android:textSize="14sp"
+        android:textColor="@color/green_light"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="32dp" />
+
+
+    <EditText
+        android:id="@+id/edtTelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu Telefone"
+        android:background="@drawable/custom_edittext"
+        android:layout_marginBottom="24dp"
+        android:inputType="phone" />
+
+
+    <Button
+        android:id="@+id/btnProximo"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Cadastar"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_button"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/txtCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CADASTRO"
+        android:textSize="24sp"
+        android:textColor="@color/green_dark"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+
+    <TextView
+        android:id="@+id/txtSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite suas informações pessoais"
+        android:textSize="14sp"
+        android:textColor="@color/green_light"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+
+    <EditText
+        android:id="@+id/edtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu Nome"
+        android:background="@drawable/custom_edittext"
+        android:layout_marginBottom="16dp"
+        android:inputType="textPersonName" />
+
+
+    <EditText
+        android:id="@+id/edtCpf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu CPF"
+        android:background="@drawable/custom_edittext"
+        android:layout_marginBottom="16dp"
+        android:inputType="number" />
+
+
+    <EditText
+        android:id="@+id/edtRg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu RG"
+        android:background="@drawable/custom_edittext"
+        android:layout_marginBottom="16dp"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edtDataNascimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua Data de nascimento"
+        android:background="@drawable/custom_edittext"
+        android:layout_marginBottom="24dp"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Continuar"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_button"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Texto para Login -->
+    <TextView
+        android:id="@+id/txtJaTemConta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Já tem conta?"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:gravity="center" />
+
+</LinearLayout>
