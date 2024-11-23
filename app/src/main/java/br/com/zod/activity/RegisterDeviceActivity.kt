@@ -109,7 +109,6 @@ class RegisterDeviceActivity : AppCompatActivity() {
         apiService.registerDevice("Bearer $token", device).enqueue(object : Callback<Map<String, Any>> {
             override fun onResponse(call: Call<Map<String, Any>>, response: Response<Map<String, Any>>) {
                 progressDialog.dismiss() // Esconde o loading
-
                 if (response.isSuccessful) {
                     Log.d("RegisterDeviceActivity", "Resposta da API: sucesso, dispositivo registrado")
                     showSuccessDialog("Dispositivo cadastrado com sucesso!")
@@ -121,7 +120,7 @@ class RegisterDeviceActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Map<String, Any>>, t: Throwable) {
-                progressDialog.dismiss() // Esconde o loading
+                progressDialog.dismiss()
                 Log.e("RegisterDeviceActivity", "Erro de conexão ao registrar dispositivo: ${t.message}")
                 Toast.makeText(this@RegisterDeviceActivity, "Erro de conexão: ${t.message}", Toast.LENGTH_SHORT).show()
             }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Toolbar -->
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -19,14 +19,14 @@
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-        <!-- Main Content -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Title -->
+
             <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
@@ -38,7 +38,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <!-- ListView for Device List -->
+
             <ListView
                 android:id="@+id/deviceListView"
                 android:layout_width="match_parent"
@@ -47,7 +47,7 @@
                 android:divider="@color/green_dark"
                 android:dividerHeight="1dp" />
 
-            <!-- Button for Adding New Device -->
+
             <Button
                 android:id="@+id/newButton"
                 android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
                 android:text="Adicionar Novo Dispositivo"
                 android:textColor="@color/white" />
 
-            <!-- Footer -->
+
             <TextView
                 android:id="@+id/footer"
                 android:layout_width="match_parent"
@@ -72,7 +72,7 @@
         </LinearLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    <!-- Navigation Drawer -->
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
         android:layout_width="wrap_content"

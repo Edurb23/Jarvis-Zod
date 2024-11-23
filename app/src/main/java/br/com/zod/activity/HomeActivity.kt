@@ -32,12 +32,12 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        // Configurar DrawerLayout e Toolbar
+
         drawerLayout = findViewById(R.id.drawerLayout)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        // Configurar o botão hambúrguer
+
         toggle = ActionBarDrawerToggle(
             this, drawerLayout, toolbar,
             R.string.navigation_drawer_open, R.string.navigation_drawer_close
@@ -45,17 +45,17 @@ class HomeActivity : AppCompatActivity() {
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        // Configurar NavigationView
+
         val navigationView = findViewById<NavigationView>(R.id.navigationView)
         navigationView.setNavigationItemSelectedListener { menuItem ->
             handleMenuItemClick(menuItem)
         }
 
-        // Configurar Views
+
         pieChartView = findViewById(R.id.pieChartView)
         valueConsumoTotal = findViewById(R.id.valueConsumoTotal)
 
-        // Carregar dados do gráfico e consumo total
+
         loadPieChartData()
         loadConsumoTotal()
     }
@@ -67,7 +67,7 @@ class HomeActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    // Função para lidar com cliques no menu
+
     private fun handleMenuItemClick(menuItem: MenuItem): Boolean {
         when (menuItem.itemId) {
             R.id.nav_home -> {
@@ -92,7 +92,7 @@ class HomeActivity : AppCompatActivity() {
         return true
     }
 
-    // Função para carregar os dados do gráfico
+
     private fun loadPieChartData() {
         val sharedPreferences = getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
         val token = sharedPreferences.getString("token", null) ?: run {

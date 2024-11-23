@@ -78,7 +78,7 @@
         android:background="@drawable/custom_button"
         android:layout_marginBottom="16dp" />
 
-    <!-- Texto para Login -->
+
     <TextView
         android:id="@+id/txtJaTemConta"
         android:layout_width="wrap_content"

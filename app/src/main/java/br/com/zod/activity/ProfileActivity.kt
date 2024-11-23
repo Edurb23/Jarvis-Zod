@@ -161,7 +161,7 @@ class ProfileActivity : AppCompatActivity() {
                 startActivity(Intent(this, DeviceActivity::class.java))
             }
             R.id.nav_logout -> {
-                // Logout: limpar dados do SharedPreferences e voltar ao login
+
                 val sharedPreferences = getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
                 val editor = sharedPreferences.edit()
                 editor.clear()

@@ -17,8 +17,8 @@ import retrofit2.Response
 
 class DeviceAdapter(
     private val context: Context,
-    private val devices: MutableList<String>, // Lista mutável para remoção após exclusão
-    private val onDeviceDeleted: () -> Unit // Callback para atualizar a lista no activity
+    private val devices: MutableList<String>,
+    private val onDeviceDeleted: () -> Unit
 ) : ArrayAdapter<String>(context, R.layout.item_device, devices) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -56,7 +56,7 @@ class DeviceAdapter(
             return
         }
 
-        // Mostrando o loading
+
         val Loading = ProgressDialog(context)
         Loading.setMessage("Excluindo dispositivo...")
         Loading.setCancelable(false)
@@ -65,12 +65,12 @@ class DeviceAdapter(
         val apiService = Api.instance.create(ApiService::class.java)
         apiService.deleteDevice("Bearer $token", deviceName).enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                Loading.dismiss() // Esconde o loading
+                Loading.dismiss() //
 
                 if (response.isSuccessful) {
-                    devices.removeAt(position) // Remove o item da lista
-                    notifyDataSetChanged() // Atualiza a lista
-                    onDeviceDeleted() // Chama o callback no activity
+                    devices.removeAt(position)
+                    notifyDataSetChanged()
+                    onDeviceDeleted()
 
                     showSuccessDialog("Dispositivo excluído com sucesso!")
                 } else {
@@ -79,7 +79,7 @@ class DeviceAdapter(
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
-                Loading.dismiss() // Esconde o loading
+                Loading.dismiss()
                 Toast.makeText(context, "Erro de conexão: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })

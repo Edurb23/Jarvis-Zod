@@ -60,7 +60,7 @@ class EditProfileActivity : AppCompatActivity() {
 
         loadUserData()
 
-        // Atualizar perfil
+
         btnSave.setOnClickListener {
             updateUserProfile()
         }
@@ -124,7 +124,7 @@ class EditProfileActivity : AppCompatActivity() {
                                         Toast.LENGTH_SHORT
                                     ).show()
 
-                                    // Redirecionar para a tela de perfil
+
                                     val intent = Intent(this@EditProfileActivity, ProfileActivity::class.java)
                                     startActivity(intent)
                                     finish()
